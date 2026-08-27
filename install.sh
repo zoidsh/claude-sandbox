@@ -30,7 +30,7 @@ if [ -d "$dotfiles/.git" ]; then
   git -C "$dotfiles" pull --ff-only ||
     echo "could not update $dotfiles — leaving it as it is" >&2
 else
-  gh repo clone "${CLAUDE_DOTFILES_REPO:-claude-dotfiles}" "$dotfiles" ||
+  gh repo clone "${CLAUDE_DOTFILES_REPO:-zoidsh/claude-dotfiles}" "$dotfiles" ||
     echo "could not clone the dotfiles repo — the shell stays on bash" >&2
 fi
 

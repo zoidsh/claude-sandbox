@@ -4,7 +4,7 @@
 # over — root over SSH, no unprivileged account yet — so the run has to start
 # as root whether or not the account already exists.
 #
-#   curl -fsSL https://raw.githubusercontent.com/timche/claude-sandbox/main/provision.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/zoidsh/claude-sandbox/main/provision.sh | bash
 #
 # It creates that account, gives it the keys root is already reachable with,
 # and hands everything else to setup.sh running as it. Nothing here duplicates
@@ -19,7 +19,7 @@ set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
 user="${CLAUDE_SANDBOX_USER:-claude}"
-repo_url="${CLAUDE_SANDBOX_REPO:-https://github.com/timche/claude-sandbox.git}"
+repo_url="${CLAUDE_SANDBOX_REPO:-https://github.com/zoidsh/claude-sandbox.git}"
 
 # Extra keys to authorize, one per line, for runs with nobody at the keyboard.
 extra_keys="${SSH_PUBLIC_KEYS:-}"

@@ -1,6 +1,6 @@
 # Claude Sandbox
 
-[![test](https://github.com/timche/claude-sandbox/actions/workflows/test.yml/badge.svg)](https://github.com/timche/claude-sandbox/actions/workflows/test.yml)
+[![test](https://github.com/zoidsh/claude-sandbox/actions/workflows/test.yml/badge.svg)](https://github.com/zoidsh/claude-sandbox/actions/workflows/test.yml)
 
 Provisioning for a Debian VM dedicated to running Claude Code, which is why the
 machine runs it with `bypassPermissions` — there is nothing on it worth
@@ -9,7 +9,7 @@ guarding Claude from.
 As root, which is how a VM arrives from a provider:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/timche/claude-sandbox/main/provision.sh | bash
+curl -fsSL https://raw.githubusercontent.com/zoidsh/claude-sandbox/main/provision.sh | bash
 ```
 
 That is the only entry point. It creates the account, clones this repo and runs
