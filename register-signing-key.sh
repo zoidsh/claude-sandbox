@@ -13,7 +13,7 @@
 
 set -euo pipefail
 
-signing_key="${1:-$HOME/.ssh/git-signing.pub}"
+signing_key="${1:-$HOME/.ssh/claude-sandbox.pub}"
 
 if [ ! -f "$signing_key" ]; then
   echo "no signing key at $signing_key — run keys.sh first" >&2

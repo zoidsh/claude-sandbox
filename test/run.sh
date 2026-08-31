@@ -119,14 +119,14 @@ for image in "${images[@]}"; do
       git config --global user.name tester
       git config --global user.email tester@example.com
       git config --global gpg.format ssh
-      git config --global user.signingkey '~/.ssh/git-signing.pub'
+      git config --global user.signingkey '~/.ssh/claude-sandbox.pub'
       git config --global gpg.ssh.allowedSignersFile '~/.ssh/allowed_signers'
       git config --global commit.gpgsign true
       ssh-keygen -q -t ed25519 -N '' -C pasted -f /tmp/pasted
       { cat /tmp/pasted; printf '\n'; } |
         script -qec /home/$user/claude-sandbox/keys.sh /dev/null
       test ! -L /home/$user/.ssh/allowed_signers
-      cmp -s /tmp/pasted /home/$user/.ssh/git-signing
+      cmp -s /tmp/pasted /home/$user/.ssh/claude-sandbox
       rm -rf /tmp/signing && mkdir /tmp/signing && cd /tmp/signing
       git init -q .
       git commit --allow-empty -q -m signed

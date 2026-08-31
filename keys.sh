@@ -17,7 +17,7 @@
 set -euo pipefail
 
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-signing_key="$HOME/.ssh/git-signing"
+signing_key="$HOME/.ssh/claude-sandbox"
 authorized_keys="$HOME/.ssh/authorized_keys"
 allowed_signers="$HOME/.ssh/allowed_signers"
 
